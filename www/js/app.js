@@ -23,5 +23,32 @@ angular.module('starter', ['ionic'])
     });
   })
   .config(function ($stateProvider, $urlRouterProvider) {
+    //Specifying states
+    $stateProvider
+      .state('app', {
+        url: '/app',
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl',
+        abstract: true
+      })
+      .state('app.home', {
+        url: '/home',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/home.html',
+            controller: 'HomeCtrl'
+          }
+        }
+      })
+
+    //default page
+    $urlRouterProvider.otherwise('app/home');
+  })
+
+  .controller('AppCtrl', function () {
+
+  })
+
+  .controller('HomeCtrl', function () {
 
   })

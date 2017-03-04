@@ -1,0 +1,33 @@
+<ion-side-menus>
+    <!-- side menu content -->
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <!-- navigation back button -->
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <!-- side menu button -->
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <!-- cart menu button -->
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-cart" menu-toggle="right"></button>
+                <!-- cart badge -->
+                <span class="badge badge-assertive">2</span>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <!--Nav View-->
+        <ion-nav-view name="menuContent">
+        </ion-nav-view>
+    </ion-side-menu-content>
+    <!--Side Menu-->
+    <ion-side-menu>
+        <!--Side Menu List-->
+        <ion-list>
+            <ion-item>Login</ion-item>
+            <ion-item>Home</ion-item>
+            <ion-item>Browse</ion-item>
+            <ion-item class="item-divider">Categories</ion-item>
+        </ion-list>
+    </ion-side-menu>
+</ion-side-menus>
