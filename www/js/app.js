@@ -52,7 +52,15 @@ angular.module('starter', ['ionic', 'starter.services'])
       if (err) {
         console.log(err);
       } else {
-        console.log(res);
+        $scope.categories = JSON.parse(res).product_categories;
+
+        $scope.mainCategories = [];
+
+        $scope.categories.forEach(function (element, index) {
+          if (element.parent == 0) {
+            $scope.mainCategories.push(element);
+          }
+        });
       }
     });
   })

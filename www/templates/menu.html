@@ -22,12 +22,16 @@
     </ion-side-menu-content>
     <!--Side Menu-->
     <ion-side-menu>
+        <!--Side Menu Banner-->
+        <!--<img src="" style="width:100%;height: auto">-->
         <!--Side Menu List-->
         <ion-list>
             <ion-item>Login</ion-item>
             <ion-item>Home</ion-item>
             <ion-item>Browse</ion-item>
+            <!--Product Categories-->
             <ion-item class="item-divider">Categories</ion-item>
+            <ion-item ng-repeat="cat in mainCategories">{{cat.name}}</ion-item>
         </ion-list>
     </ion-side-menu>
 </ion-side-menus>
