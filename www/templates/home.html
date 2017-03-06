@@ -16,7 +16,7 @@
             </ion-item>
             <!--Display main categories-->
             <ion-item class="item-avatar-left" ng-repeat="cat in categories">
-                <img src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}">
+                <img ng-src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}">
                 <h2>{{cat.name}}</h2>
                 <p>{{cat.description}}</p>
             </ion-item>
@@ -24,7 +24,7 @@
         <!--Footer Banner-->
         <ion-list class="item-body">
             <ion-item class="item-image padding">
-                <img src="img/footer_banner.png">
+                <img ng-src="img/footer_banner.png">
             </ion-item>
             <!--Footer Text-->
             <ion-item>
