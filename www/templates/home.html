@@ -1,37 +1,32 @@
 <ion-view>
     <ion-nav-title>Fashion Harbour</ion-nav-title>
-
+    
     <ion-content>
-        <!--Image Slider-->
         <ion-slide-box show-pager="true" does-continue="true" pager-click="true" auto-play="true" slide-interval="4000">
-            <ion-slide ng-repeat="count in [1,2,3,4]">
-                <img ng-src="img/home_slider/{{count}}.jpg" class="full-image">
+            <ion-slide ng-repeat="count in [1,2,3]">
+                <img ng-src="img/home_slider/{{count}}.jpg" class="full-image"/>
             </ion-slide>
         </ion-slide-box>
-        <!--Category List-->
+        
         <ion-list class="list-card">
-            <ion-item class="item-divider item-button-right">
-                Shop by Category
-                <button class="button button-small button-clear button-assertive">View all</button>
+            <ion-item class="item-dividier item-button-right">
+                Shop By Category
+                <button class="button button-small button-clear button-assertive" ui-sref="app.categories">View All</button>
             </ion-item>
-            <!--Display main categories-->
-            <ion-item class="item-avatar-left" ng-repeat="cat in categories">
-                <img ng-src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}">
+            <ion-item class="item-avatar-left" ng-repeat="cat in mainCategories" ui-sref="app.category({categoryID: cat.slug})">
+                <!--<img ng-src="{{cat.image || 'http://loremflickr.com/64/64/'+cat.name}}"/>-->
+                <img ng-src="{{cat.image}}"/>
                 <h2>{{cat.name}}</h2>
                 <p>{{cat.description}}</p>
             </ion-item>
         </ion-list>
-        <!--Footer Banner-->
         <ion-list class="item-body">
             <ion-item class="item-image padding">
-                <img ng-src="img/footer_banner.png">
+                <img src="img/footer_banner.jpg"/>
             </ion-item>
-            <!--Footer Text-->
             <ion-item>
-                <div style="font-size: 10px">
-                    <center>Fashion Harbour 2017</center>
-                </div>
+                <div style="font-size:10px;"><center>Fashion Harbour 2017</center></div>
             </ion-item>
         </ion-list>
-    </ion-content>
+    <ion-content>
 </ion-view>

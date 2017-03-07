@@ -36,6 +36,8 @@ angular.module('starter.controllers', [])
                     console.log(err);
                 } else {
                     $scope.products = JSON.parse(res).products;
+                    console.log('$scope.products: ', $scope.products);
+                    console.log('JSON.parse(res).products: ', JSON.parse(res).products);
                 }
             });
         }
