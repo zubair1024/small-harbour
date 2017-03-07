@@ -5,5 +5,10 @@
 
 This is a app developed for a client. There is nothing much to see here... Chao
 
+#### Frameworks involved:
+* Ionic Framework
+* AngularJS
+* WooCommerce REST API
+
 
 #### Zubair Ahmed
